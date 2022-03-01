@@ -24,3 +24,7 @@ Phase 3:
 - greedy
 - binary search
 - backtracking
+
+## Tools
+
+- [Timer](https://vclock.com/timer/#countdown=00:30:00&enabled=0&seconds=1800&sound=xylophone&loop=1)
