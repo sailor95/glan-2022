@@ -29,7 +29,7 @@ var lengthOfLongestSubstring = function (s) {
   return max
 }
 
-// Ref: https://leetcode.com/problems/longest-substring-without-repeating-characters/discuss/2291/9-line-JavaScript-solution
+// https://leetcode.com/problems/longest-substring-without-repeating-characters/discuss/2291/9-line-JavaScript-solution
 function lengthOfLongestSubstring2(s) {
   const map = {}
   var left = 0
