@@ -13,8 +13,6 @@
 const transferFileName = n =>
   n.replace(/\./, '').replace(/\s/g, '-').toLowerCase().concat('.js')
 
-const fileName = transferFileName(
-  '3. Longest Substring Without Repeating Characters'
-)
+const fileName = transferFileName('4. Median of Two Sorted Arrays')
 
 console.log(fileName)
