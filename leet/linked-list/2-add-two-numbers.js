@@ -43,3 +43,25 @@ const addTwoNumbers = (l1, l2) => {
 
   return result.next
 }
+
+// Recursion
+// https://leetcode.com/problems/add-two-numbers/discuss/399562/Javascript-Recursion!
+
+const addTwoNumbersRecursive = (l1, l2) => {
+  const add = (node1, node2, sum = 0) => {
+    if (!(node1 || node2 || sum)) return null
+
+    let carry = 0
+
+    if (node1?.val) sum += node1.val
+    if (node2?.val) sum += node2.val
+    if (sum >= 10) {
+      sum -= 10
+      carry = 1
+    }
+
+    return new ListNode(sum, add(node1?.next, node2?.next, carry))
+  }
+
+  return add(l1, l2)
+}
