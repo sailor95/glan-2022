@@ -41,6 +41,21 @@ function lengthOfLongestSubstring2(s) {
   }, 0)
 }
 
+function lengthOfLongestSubstring2_1(s) {
+  const map = {}
+  var left = 0
+
+  return s.split('').reduce((max, v, i) => {
+    if (map[v] >= left) {
+      left = map[v] + 1
+    }
+
+    map[v] = i
+
+    return Math.max(max, i - left + 1)
+  }, 0)
+}
+
 // https://leetcode.com/problems/longest-substring-without-repeating-characters/discuss/475803/JavaScript-Sliding-Window
 function lengthOfLongestSubstring(s) {
   let seen = new Set()
